@@ -1,96 +1,96 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>
-    Guitar Stuff
-    </title>
-  </head>
-  
-  <body>
 
-    <header>
-      Guitar Stuff
-      <link rel="stylesheet" type="text/css" href="main.css">
-    </header>
-    
-    <main id = "main">
-      <div class = "cover_page">
-        <a href = "18stringguitararticle.html">
-          <figure>
-          Jared Dines gets a new 18-string guitar from Ormsby
-          </figure>
-        </a> 
-        <a href = "18stringguitararticle.html">
-          <figure>
-            <img src = '18stringguitar.jpg'>
-          </figure> 
-        </a>
-      </div>
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
 
-      <div class = "paragraph">
-          <p> Guitar stuff is an organization that primarily focuses on selling guitars and stuff. </p>
-          <a href = "contact.html">  CONTACT US  </a>
-      </div>
+body{
+  margin: 0;
+  padding: 0;
+}
 
-      <div class = "other_guitars">
-        <a href="article.html">
-          <figure>
-            <img src="strat.jpg">
-            <figcaption>
-              Stratocaster
-            </figcaption>
-          </figure>
-        </a>
-        <a href="article.html">
-          <figure>
-            <img src="tele.jpg">
-            <figcaption>
-              Telecaster
-            </figcaption>
-          </figure>
-        </a>
-        <a href="article.html">
-          <figure>
-            <img src="LP.jpg">
-            <figcaption>
-              Les Paul
-            </figcaption>
-          </figure>
-        </a>
-        <a href="article.html">
-          <figure>
-            <img src="semi-hollow.jpg">
-            <figcaption>
-              Semi-Hollow
-            </figcaption>
-          </figure>
-        </a>
-        <a href="article.html">
-          <figure>
-            <img src="jaguar.jpg">
-            <figcaption>
-              Jaguar
-            </figcaption>
-          </figure>
-        </a>
-        <a href="article.html">
-          <figure>
-            <img src="jazzmaster.jpg">
-            <figcaption>
-              Jazzmaster
-            </figcaption>
-          </figure>
-        </a>
-      </div>
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2.4em;
+}
 
-      <div class = "partners">
-        <ul>
-          <li> Partner 1 </li>
-          <li> Partner 2 </li>
-        </ul> 
-      </div>  
+.cover_page {
+  display: grid;
+  grid-template-columns: article_3fr 3fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+  "article_1 article_2"
+  "article_1 article_2"
+  "article_1 article_2";
+  max-height: 100vh;
+}
 
-    </main>
-  </body>
-  
-</html>
+.cover_page a {
+  display: block;
+  max-width: 70vw;
+  height: 100%;
+}
+
+.cover_page figure {
+  margin: 0;
+  height: 100%;
+}
+
+.cover_page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover_page a:nth-child(1) { grid-area: article_1; }
+.cover_page a:nth-child(2) { grid-area: article_2; }
+
+
+.paragraph{
+
+  text-align: center;
+  vertical-align: center;
+
+}
+
+
+.other_guitars {
+  display: grid;
+  grid-template-columns: article_1fr 3fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  "article_1 article_2 article_5"
+  "article_3 article_4 article_6";
+  max-height: 100vh;
+}
+
+.other_guitars a {
+  display: block;
+  max-width: 70vw;
+  height: 100%;
+}
+
+.other_guitars figure {
+  margin: 0;
+  height: 100%;
+}
+
+.other_guitars img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.other_guitars a:nth-child(1) { grid-area: article_1; }
+.other_guitars a:nth-child(2) { grid-area: article_2; }
+.other_guitars a:nth-child(3) { grid-area: article_3; }
+.other_guitars a:nth-child(4) { grid-area: article_4; }
+.other_guitars a:nth-child(5) { grid-area: article_5; }
+.other_guitars a:nth-child(6) { grid-area: article_6; }
+
+
+.partners ul li{
+    padding: 1em 0;
+}
